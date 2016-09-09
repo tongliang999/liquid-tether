@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import LiquidWormhole from 'liquid-wormhole/components/liquid-wormhole';
+import LiquidWormhole from 'zbj-liquid-wormhole/components/liquid-wormhole';
 import layout from '../templates/components/liquid-tether';
 
 const { computed, get, observer, run } = Ember;
@@ -40,6 +40,7 @@ export default LiquidWormhole.extend({
   },
 
   addTether() {
+
     if (get(this, '_tetherTarget')) {
       this._tether = new Tether(this._tetherOptions());
     }

@@ -1,14 +1,15 @@
-import { target, onOpenTether } from 'liquid-tether';
+import { target, onOpenTether } from 'zbj-liquid-tether';
 
 const options = {
-  duration: 1500,
+  duration: 3000,
   easing: 'easeInOutQuint'
 };
 
 export default function() {
   this.transition(
     target('hello-world'),
-    this.use('tether', ['fade-left', { duration: 400, easing: [600, 22] }])
+    // this.use('tether', ['fade-down', { duration: 400, easing: [600, 22] }])
+    this.use('tether', ['fade-down', { duration: 400 }])
   );
 
   /* Modal Examples */
@@ -17,7 +18,8 @@ export default function() {
     target('modal-dialog'),
     this.toValue(({ index: newIndex }, { index: oldIndex }) => newIndex > oldIndex),
     this.use('tether', ['to-left', options]),
-    this.reverse('tether', ['to-right', options])
+    this.reverse('tether', ['to-right', options]),
+    this.debug()
   );
 
   this.transition(

@@ -15,18 +15,17 @@
   <button {{action 'toggleHello'}} id="hello-world-button" class="btn btn-primary btn-embossed">
     Hello, World!
   </button>
-
   {{#if showHello}}
     {{#liquid-tether
       to="hello-world"
       target="#hello-world-button"
-      attachment="middle left"
-      targetAttachment="middle right"
+      attachment="top middle"
+      targetAttachment="bottom middle"
       class="container123"
       tetherClass="tether123"
       overlayClass="overlay123"
     }}
-      <div id="hello-world-popover" class="popover right">
+      <div id="hello-world-popover" class="popover bottom">
         <div class="arrow"></div>
         <div class="popover-title">
           Hello!

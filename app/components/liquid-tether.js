@@ -1,1 +1,1 @@
-export { default } from 'liquid-tether/components/liquid-tether';
+export { default } from 'zbj-liquid-tether/components/liquid-tether';
